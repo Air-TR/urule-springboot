@@ -28,6 +28,7 @@ public class InvokeServiceImpl implements InvokeService {
         session.insert(customer);
         //执行所有满足条件的规则
         session.fireRules();
+        //执行结果
         System.out.println(customer.getName());
     }
 
