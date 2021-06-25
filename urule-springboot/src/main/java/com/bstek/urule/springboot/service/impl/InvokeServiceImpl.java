@@ -16,20 +16,22 @@ public class InvokeServiceImpl implements InvokeService {
     public void invokeDemo() throws Exception {
         //从Spring中获取KnowledgeService接口实例
         KnowledgeService service=(KnowledgeService) Utils.getApplicationContext().getBean(KnowledgeService.BEAN_ID);
-        //通过KnowledgeService接口获取指定的资源包"projectName/test123"
-        KnowledgePackage knowledgePackage=service.getKnowledge("demo/demo");
+        //通过KnowledgeService接口获取指定的资源包，格式：项目名/知识包ID
+        KnowledgePackage knowledgePackage=service.getKnowledge("demo/jclKno");
         //通过取到的KnowledgePackage对象创建KnowledgeSession对象
         KnowledgeSession session= KnowledgeSessionFactory.newKnowledgeSession(knowledgePackage);
 
         Customer customer = new Customer();
         customer.setAge(20);
-        customer.setLevel(15);
+        customer.setLevel(5);
         //将业务数据对象Employee插入到KnowledgeSession中
         session.insert(customer);
         //执行所有满足条件的规则
-        session.fireRules();
+//        session.fireRules();
+        //执行决策流，输入决策流ID
+        session.startProcess("JCL001");
         //执行结果
-        System.out.println(customer.getName());
+        System.out.println(customer.getScore());
     }
 
 }
