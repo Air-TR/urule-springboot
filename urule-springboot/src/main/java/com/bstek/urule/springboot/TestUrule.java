@@ -1,4 +1,4 @@
-package com.bstek.urule.springboot.service.impl;
+package com.bstek.urule.springboot;
 
 import com.bstek.urule.Utils;
 import com.bstek.urule.runtime.KnowledgePackage;
@@ -6,14 +6,18 @@ import com.bstek.urule.runtime.KnowledgeSession;
 import com.bstek.urule.runtime.KnowledgeSessionFactory;
 import com.bstek.urule.runtime.service.KnowledgeService;
 import com.bstek.urule.springboot.entity.Customer;
-import com.bstek.urule.springboot.service.InvokeService;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
-@Service
-public class InvokeServiceImpl implements InvokeService {
+import java.io.IOException;
 
-    @Override
-    public void invokeDemo() throws Exception {
+/**
+ * @author rtao
+ * @date 2021/9/2 10:53
+ */
+@Component
+public class TestUrule {
+
+    public static void main(String[] args) throws IOException {
         //从Spring中获取KnowledgeService接口实例
         KnowledgeService service=(KnowledgeService) Utils.getApplicationContext().getBean(KnowledgeService.BEAN_ID);
         //通过KnowledgeService接口获取指定的资源包，格式：项目名/知识包ID
@@ -33,5 +37,4 @@ public class InvokeServiceImpl implements InvokeService {
         //执行结果
         System.out.println(customer.getScore());
     }
-
 }

@@ -18,4 +18,6 @@
 		<property name="removeAbandoned" value="true" />
 		<property name="logAbandoned" value="true" />
 	</bean>
+	<bean id="financialStatementAction" class="com.bstek.urule.springboot.action.FinancialStatementAction"></bean>
+	<bean id="myMathAction" class="com.bstek.urule.springboot.action.MyMathAction"></bean>
 </beans>

@@ -75,6 +75,29 @@
 			<version>2.5</version>
 			<scope>provided</scope>
 		</dependency>
+
+		<!-- Amarsoft JAR Start -->
+		<dependency>
+			<groupId>com.amarsoft.are</groupId>
+			<artifactId>are</artifactId>
+			<version>2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.amarsoft.osf.client</groupId>
+			<artifactId>osf-client</artifactId>
+			<version>1.50.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.amarsoft.osf.core</groupId>
+			<artifactId>osf-core</artifactId>
+			<version>1.50.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.amarsoft.osf.server</groupId>
+			<artifactId>osf-server</artifactId>
+			<version>1.50.0</version>
+		</dependency>
+		<!-- Amarsoft JAR End -->
 	</dependencies>
 	<build>
 		<plugins>
