@@ -1,4 +1,4 @@
-package com.bstek.urule.springboot.action;
+package com.bstek.urule.springboot.aaa;
 
 import com.bstek.urule.model.library.action.annotation.ActionBean;
 import com.bstek.urule.model.library.action.annotation.ActionMethod;

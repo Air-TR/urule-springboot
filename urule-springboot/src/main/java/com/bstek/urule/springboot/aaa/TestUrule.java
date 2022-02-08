@@ -1,4 +1,4 @@
-package com.bstek.urule.springboot;
+package com.bstek.urule.springboot.aaa;
 
 import com.bstek.urule.Utils;
 import com.bstek.urule.runtime.KnowledgePackage;
